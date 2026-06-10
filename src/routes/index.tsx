@@ -69,10 +69,10 @@ const configurations = [
 ];
 
 const offers = [
-  { icon: Gift, title: "Free Modular Kitchen", desc: "Worth ₹1.5 Lacs with every booking" },
-  { icon: Percent, title: "0% Stamp Duty", desc: "Limited period government scheme benefit" },
+  { icon: Gift, title: "Free Modular Kitchen", desc: "Semi-Furnished Flats avalaible" },
+  { icon: Percent, title: "0% Stamp Duty", desc: "limited period offer" },
   { icon: Clock, title: "Instant Possession", desc: "Move in within 30 days of booking" },
-  { icon: IndianRupee, title: "Booking Amount", desc: "Just ₹51,000 to book your dream home" },
+  { icon: IndianRupee, title: "Booking Amount", desc: "Just ₹11,000 to book your dream home" },
 ];
 
 function EnquiryPopup({ open, onClose }: { open: boolean; onClose: () => void }) {
