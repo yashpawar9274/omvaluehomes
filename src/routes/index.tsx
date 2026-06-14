@@ -197,8 +197,8 @@ function Landing() {
       <header className="fixed top-0 inset-x-0 z-50 backdrop-blur-md bg-background/85 border-b border-border">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between gap-3">
           <div className="flex items-center gap-2 min-w-0">
-            <div className="w-9 h-9 rounded-lg bg-[var(--gradient-hero)] flex items-center justify-center shrink-0">
-              <Home className="w-5 h-5 text-primary-foreground" />
+            <div className="w-9 h-9 rounded-lg bg-navy flex items-center justify-center shrink-0 shadow-sm">
+              <Home className="w-5 h-5 text-gold" />
             </div>
             <div className="leading-tight min-w-0">
               <div className="font-display font-bold text-navy text-sm truncate">OM VALUE HOMES</div>
@@ -217,26 +217,26 @@ function Landing() {
       </header>
 
       {/* HERO */}
-      <section className="relative pt-16 min-h-[90vh] sm:min-h-screen flex items-center overflow-hidden">
+      <section className="relative pt-16 min-h-[90vh] sm:min-h-screen overflow-hidden">
         <div className="absolute inset-0">
           <img src={heroBanner.url} alt="Fair Township Palghar" className="w-full h-full object-cover" />
           <div className="absolute inset-0 bg-gradient-to-r from-navy/95 via-navy/85 to-navy/50" />
         </div>
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 py-16 sm:py-24 grid lg:grid-cols-2 gap-12 items-center w-full">
-          <div className="text-primary-foreground">
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 py-10 sm:py-24 sm:pb-32 grid lg:grid-cols-2 gap-12 items-center w-full">
+          <div className="text-primary-foreground min-w-0">
             {/* Live visitor pill */}
-            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-emerald-500/20 border border-emerald-400/40 text-emerald-200 text-[11px] sm:text-xs font-semibold mb-4">
+            <div className="inline-flex max-w-full items-center gap-2 px-3 py-1.5 rounded-2xl bg-emerald-500/25 border border-emerald-300/60 text-emerald-100 text-[11px] sm:text-xs font-semibold mb-4 shadow-sm">
               <span className="relative flex h-2 w-2">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-400"></span>
               </span>
               <Eye className="w-3.5 h-3.5" />
-              <span><span className="text-white font-bold">{visitors}</span> people viewing this property now</span>
+              <span className="min-w-0 leading-snug"><span className="text-white font-bold">{visitors}</span> people viewing this property now</span>
             </div>
             <div className="inline-flex sm:ml-2 items-center gap-2 px-3 sm:px-4 py-1.5 rounded-full bg-gold/25 border border-gold/50 text-gold text-[10px] sm:text-xs font-semibold tracking-wider uppercase mb-4 sm:mb-6">
               <Sparkles className="w-3 h-3 sm:w-3.5 sm:h-3.5" /> Ready Possession Homes
             </div>
-            <h1 className="text-4xl sm:text-5xl md:text-7xl font-black leading-[0.95] mb-4 sm:mb-6 break-words">
+            <h1 className="text-4xl sm:text-5xl md:text-7xl font-black leading-[0.95] mb-4 sm:mb-6 break-words text-white">
               FAIR<br />
               <span className="text-gold">TOWNSHIP</span>
             </h1>
@@ -275,17 +275,17 @@ function Landing() {
           </div>
         </div>
         {/* Floating stats */}
-        <div className="relative sm:absolute sm:bottom-0 sm:inset-x-0 bg-white/95 backdrop-blur border-t border-border">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 py-3 sm:py-4 grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4">
+        <div className="relative z-20 w-full sm:absolute sm:bottom-0 sm:inset-x-0 bg-white/95 backdrop-blur border-t border-border shadow-[0_-12px_35px_-25px_rgba(0,0,0,0.35)]">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 py-3 sm:py-4 grid grid-cols-1 min-[360px]:grid-cols-2 md:grid-cols-4 gap-2 sm:gap-4">
             {[
               { icon: CheckCircle2, label: "Ready Possession" },
               { icon: MapPin, label: "Prime Palghar (W)" },
               { icon: Users, label: "Ideal for Families" },
               { icon: Building2, label: "MahaRERA Approved" },
             ].map((s) => (
-              <div key={s.label} className="flex items-center gap-2 sm:gap-3 text-navy">
+              <div key={s.label} className="flex min-w-0 items-center gap-2 sm:gap-3 text-navy rounded-xl bg-secondary/70 px-3 py-2 sm:bg-transparent sm:px-0 sm:py-0">
                 <s.icon className="w-4 h-4 sm:w-5 sm:h-5 text-accent shrink-0" />
-                <span className="text-xs sm:text-sm font-semibold">{s.label}</span>
+                <span className="text-xs sm:text-sm font-semibold leading-tight break-words">{s.label}</span>
               </div>
             ))}
           </div>
