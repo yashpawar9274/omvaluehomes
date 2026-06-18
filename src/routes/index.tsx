@@ -24,18 +24,25 @@ const WHATSAPP_DISPLAY = "+91 72640 05103";
 const MAPS_URL = "https://share.google/EB6uE6GS9beAbhgmz";
 const MAPS_EMBED = "https://www.google.com/maps?q=Dhansar+Old+Satpati+Road+Palghar+West&output=embed";
 
+const SITE_URL = "https://omvalueshome.lovable.app";
+
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Fair Township Palghar — 1, 2 & 3 BHK from ₹19.90 Lacs | Om Value Homes" },
-      { name: "description", content: "Own your dream home in Palghar! 1, 2 & 3 BHK premium apartments from ₹19.90 Lacs at Dhansar, Old Satpati Road. Modern amenities, MahaRERA approved. Call 8828300415." },
-      { property: "og:title", content: "Fair Township Palghar — Dream Homes at Dream Price" },
-      { property: "og:description", content: "1, 2 & 3 BHK premium apartments starting just ₹19.90 Lacs in Palghar (W)." },
-      { property: "og:image", content: heroBanner.url },
-      { property: "og:url", content: "/" },
+      { title: "OM Value Homes Palghar — 1, 2 & 3 BHK from ₹19.90 Lacs" },
+      { name: "description", content: "Own your dream home in Palghar! 1, 2 & 3 BHK premium apartments from ₹19.90 Lacs by OM Value Homes at Dhansar, Old Satpati Road. MahaRERA approved. Call 8828300415." },
+      { name: "keywords", content: "OM Value Homes, Palghar flats, 1 BHK Palghar, 2 BHK Palghar, 3 BHK Palghar, Dhansar, MahaRERA, affordable homes Mumbai" },
+      { property: "og:title", content: "OM Value Homes Palghar — Dream Homes at Dream Price" },
+      { property: "og:description", content: "1, 2 & 3 BHK premium apartments starting just ₹19.90 Lacs in Palghar (W). MahaRERA P99000055618." },
+      { property: "og:image", content: `${SITE_URL}${heroBanner.url}` },
+      { property: "og:url", content: `${SITE_URL}/` },
+      { property: "og:type", content: "website" },
+      { name: "twitter:title", content: "OM Value Homes Palghar — 1, 2 & 3 BHK from ₹19.90 Lacs" },
+      { name: "twitter:description", content: "Premium apartments in Palghar (W) by OM Value Homes. MahaRERA approved." },
+      { name: "twitter:image", content: `${SITE_URL}${heroBanner.url}` },
     ],
     links: [
-      { rel: "canonical", href: "/" },
+      { rel: "canonical", href: `${SITE_URL}/` },
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
       { rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700;900&family=Inter:wght@400;500;600;700&display=swap" },
@@ -122,7 +129,7 @@ function EnquiryForm({ compact = false, onDone }: { compact?: boolean; onDone?: 
         const name = (f.elements.namedItem("name") as HTMLInputElement).value;
         const phone = (f.elements.namedItem("phone") as HTMLInputElement).value;
         const config = (f.elements.namedItem("config") as HTMLSelectElement).value;
-        const msg = `Hi, I'm interested in Fair Township.%0AName: ${name}%0APhone: ${phone}%0AConfig: ${config}`;
+        const msg = `Hi, I'm interested in OM Value Homes.%0AName: ${name}%0APhone: ${phone}%0AConfig: ${config}`;
         window.open(`https://wa.me/${WHATSAPP}?text=${msg}`, "_blank");
         setSent(true);
         setTimeout(() => onDone?.(), 1200);
@@ -253,7 +260,7 @@ function Landing() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between gap-3">
           <div className="flex flex-col leading-tight">
             <span className="font-display text-lg sm:text-xl font-bold text-navy">Om Value Homes</span>
-            <span className="text-[10px] sm:text-xs tracking-[0.3em] text-primary font-semibold">FAIR TOWNSHIP</span>
+            <span className="text-[10px] sm:text-xs tracking-[0.3em] text-primary font-semibold">OM VALUE HOMES</span>
           </div>
           <div className="flex items-center gap-2 sm:gap-3">
             <a href={`tel:${PHONE}`} className="hidden sm:flex items-center gap-2 text-sm text-navy font-medium hover:text-primary">
@@ -273,7 +280,7 @@ function Landing() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 grid lg:grid-cols-2 gap-8 lg:gap-10 items-stretch">
           {/* Hero image card */}
           <div className="relative rounded-3xl overflow-hidden shadow-[var(--shadow-elegant)] min-h-[460px] lg:min-h-[600px]">
-            <img src={heroBanner.url} alt="Fair Township Palghar" className="absolute inset-0 w-full h-full object-cover" />
+            <img src={heroBanner.url} alt="OM Value Homes Palghar" className="absolute inset-0 w-full h-full object-cover" />
             <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/35 to-black/10" />
             <div className="relative z-10 h-full flex flex-col justify-end p-6 sm:p-8">
               <h1 className="font-display text-white text-4xl sm:text-5xl md:text-6xl font-bold leading-[0.95]">
@@ -345,7 +352,7 @@ function Landing() {
         <div className="grid md:grid-cols-2 gap-10 items-center">
           <div>
             <p className="text-muted-foreground text-lg leading-relaxed">
-              Discover <strong className="text-navy">Fair Township</strong> at Dhansar, Old Satpati Road, Palghar (W) — a thoughtfully crafted residential community by <strong className="text-navy">Om Value Homes</strong>. Premium 1, 2 & 3 BHK apartments designed for modern families, surrounded by gardens, temples and lifestyle amenities.
+              Discover <strong className="text-navy">OM Value Homes</strong> at Dhansar, Old Satpati Road, Palghar (W) — a thoughtfully crafted residential community. Premium 1, 2 & 3 BHK apartments designed for modern families, surrounded by gardens, temples and lifestyle amenities.
             </p>
             <ul className="mt-6 grid grid-cols-2 gap-3">
               {["MahaRERA Approved", "Modern Architecture", "Lush Green Township", "Excellent Connectivity"].map((x) => (
@@ -361,7 +368,7 @@ function Landing() {
             </div>
           </div>
           <div className="relative rounded-3xl overflow-hidden shadow-[var(--shadow-elegant)] aspect-[4/3]">
-            <img src={towerExterior.url} alt="Fair Township tower" className="absolute inset-0 w-full h-full object-cover" />
+            <img src={towerExterior.url} alt="OM Value Homes tower" className="absolute inset-0 w-full h-full object-cover" />
             <div className="absolute bottom-4 left-4 right-4 rounded-2xl bg-white/95 backdrop-blur p-4 flex items-center gap-4">
               <div>
                 <div className="text-2xl font-display font-bold text-primary">2024</div>
@@ -402,7 +409,7 @@ function Landing() {
       </Section>
 
       {/* GALLERY */}
-      <Section id="gallery" eyebrow="Gallery" title="A Glimpse of Life at Fair Township">
+      <Section id="gallery" eyebrow="Gallery" title="A Glimpse of Life at OM Value Homes">
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-4">
           {gallery.map((g, i) => (
             <figure key={i} className={`group relative rounded-2xl overflow-hidden shadow-sm aspect-[4/3] ${i === 0 ? "md:col-span-2 md:row-span-2 md:aspect-square" : ""}`}>
@@ -481,7 +488,7 @@ function Landing() {
               style={{ border: 0 }}
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
-              title="Fair Township Location Map"
+              title="OM Value Homes Location Map"
             />
             <a href={MAPS_URL} target="_blank" rel="noreferrer"
               className="block text-center py-3.5 text-sm font-semibold text-white hover:brightness-110"
@@ -540,7 +547,7 @@ function Landing() {
       {/* FOOTER */}
       <footer className="border-t border-border bg-card">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 py-8 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-muted-foreground">
-          <div className="font-display font-semibold text-navy text-sm">Fair Township by Om Value Homes</div>
+          <div className="font-display font-semibold text-navy text-sm">OM Value Homes</div>
           <div>From ₹19.90 Lacs* · 1, 2 & 3 BHK · MahaRERA P99000055618</div>
         </div>
       </footer>
@@ -560,7 +567,7 @@ function Landing() {
       </div>
 
       <EnquiryPopup open={popupOpen} onClose={() => setPopupOpen(false)} title="Quick Enquiry" subtitle="We will call you back in 10 minutes" />
-      <EnquiryPopup open={followUpOpen} onClose={() => setFollowUpOpen(false)} title="Wait — Don't Miss Out!" subtitle="Get floor plans & best price for Fair Township" />
+      <EnquiryPopup open={followUpOpen} onClose={() => setFollowUpOpen(false)} title="Wait — Don't Miss Out!" subtitle="Get floor plans & best price from OM Value Homes" />
     </div>
   );
 }
