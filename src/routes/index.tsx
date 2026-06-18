@@ -24,18 +24,25 @@ const WHATSAPP_DISPLAY = "+91 72640 05103";
 const MAPS_URL = "https://share.google/EB6uE6GS9beAbhgmz";
 const MAPS_EMBED = "https://www.google.com/maps?q=Dhansar+Old+Satpati+Road+Palghar+West&output=embed";
 
+const SITE_URL = "https://omvalueshome.lovable.app";
+
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Fair Township Palghar — 1, 2 & 3 BHK from ₹19.90 Lacs | Om Value Homes" },
-      { name: "description", content: "Own your dream home in Palghar! 1, 2 & 3 BHK premium apartments from ₹19.90 Lacs at Dhansar, Old Satpati Road. Modern amenities, MahaRERA approved. Call 8828300415." },
-      { property: "og:title", content: "Fair Township Palghar — Dream Homes at Dream Price" },
-      { property: "og:description", content: "1, 2 & 3 BHK premium apartments starting just ₹19.90 Lacs in Palghar (W)." },
-      { property: "og:image", content: heroBanner.url },
-      { property: "og:url", content: "/" },
+      { title: "OM Value Homes Palghar — 1, 2 & 3 BHK from ₹19.90 Lacs" },
+      { name: "description", content: "Own your dream home in Palghar! 1, 2 & 3 BHK premium apartments from ₹19.90 Lacs by OM Value Homes at Dhansar, Old Satpati Road. MahaRERA approved. Call 8828300415." },
+      { name: "keywords", content: "OM Value Homes, Palghar flats, 1 BHK Palghar, 2 BHK Palghar, 3 BHK Palghar, Dhansar, MahaRERA, affordable homes Mumbai" },
+      { property: "og:title", content: "OM Value Homes Palghar — Dream Homes at Dream Price" },
+      { property: "og:description", content: "1, 2 & 3 BHK premium apartments starting just ₹19.90 Lacs in Palghar (W). MahaRERA P99000055618." },
+      { property: "og:image", content: `${SITE_URL}${heroBanner.url}` },
+      { property: "og:url", content: `${SITE_URL}/` },
+      { property: "og:type", content: "website" },
+      { name: "twitter:title", content: "OM Value Homes Palghar — 1, 2 & 3 BHK from ₹19.90 Lacs" },
+      { name: "twitter:description", content: "Premium apartments in Palghar (W) by OM Value Homes. MahaRERA approved." },
+      { name: "twitter:image", content: `${SITE_URL}${heroBanner.url}` },
     ],
     links: [
-      { rel: "canonical", href: "/" },
+      { rel: "canonical", href: `${SITE_URL}/` },
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
       { rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700;900&family=Inter:wght@400;500;600;700&display=swap" },
