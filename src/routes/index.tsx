@@ -1,7 +1,8 @@
 import { useState, useEffect } from "react";
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import heroBanner from "@/assets/hero-banner.asset.json";
 import towerExterior from "@/assets/tower-exterior.jpeg.asset.json";
+import brandPoster from "@/assets/om-value-homes-poster.png.asset.json";
 import entranceLobby from "@/assets/entrance-lobby.jpeg.asset.json";
 import livingRoom from "@/assets/living-room.jpeg.asset.json";
 import masterBedroom from "@/assets/master-bedroom.jpeg.asset.json";
