@@ -95,6 +95,7 @@ const offers = [
 ];
 
 const gallery = [
+  { src: brandPoster.url, label: "Dream Home at Dream Price" },
   { src: towerExterior.url, label: "Tower Exterior" },
   { src: entranceLobby.url, label: "Entrance Lobby" },
   { src: livingRoom.url, label: "Living Room with Designer Ceilings" },
