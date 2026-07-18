@@ -268,6 +268,9 @@ function Landing() {
             <a href={`tel:${PHONE}`} className="hidden sm:flex items-center gap-2 text-sm text-navy font-medium hover:text-primary">
               <Phone className="w-4 h-4 text-primary" /> +91 {PHONE}
             </a>
+            <Link to="/booking" className="hidden sm:inline-flex px-4 py-2 rounded-lg border border-primary/40 text-navy text-sm font-semibold hover:bg-primary/5 transition">
+              Book Now
+            </Link>
             <button onClick={() => setPopupOpen(true)}
               className="px-4 sm:px-5 py-2 rounded-lg text-white text-sm font-semibold shadow-sm hover:brightness-110 transition"
               style={{ background: "var(--gradient-gold)" }}>
