@@ -1,7 +1,7 @@
 export const SITE_URL =
   process.env.NEXT_PUBLIC_SITE_URL || "https://www.budgethomes4u.com";
 export const OM_GROUP_URL = "https://www.omgroupofcompanies.com/";
-export const CALL_NUMBER = "8828300415";
+export const CALL_NUMBER = "7264005103";
 export const WHATSAPP_NUMBER = "917264005103";
 export const WHATSAPP_DISPLAY = "+91 72640 05103";
 export const EMAIL = "ashish.budgethomes@gmail.com";
